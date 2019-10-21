@@ -64,6 +64,9 @@
 -keep class org.apache.cordova.CordovaWebViewImpl { org.apache.cordova.PluginManager pluginManager; }
 -keep class org.apache.cordova.ResumeCallback { org.apache.cordova.PluginManager pluginManager; }
 -keep class org.apache.cordova.engine.SystemWebViewEngine { org.apache.cordova.PluginManager pluginManager; }
+-keep class cordova.plugin.RequestLocationAccuracy { org.apache.cordova.PluginManager pluginManager; }
+
+-keep class org.apache.cordova.plugin.RequestLocationAccuracy { org.apache.cordova.PluginManager pluginManager; }
 
 -keep class com.google.gson.internal.UnsafeAllocator { ** theUnsafe; }
 -keep class me.leolin.shortcutbadger.ShortcutBadger { ** extraNotification; }
@@ -114,3 +117,5 @@
 # These clases contain references to cordova webView
 -keep class com.ionicframework.cordova.webview.** {*; }
 -keep class com.ionicframework.cordova.webview.*
+
+-keep class id.co.sm.smartmobile.BuildConfig {*; }
